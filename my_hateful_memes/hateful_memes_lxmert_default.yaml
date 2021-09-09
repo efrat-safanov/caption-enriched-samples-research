@@ -1,0 +1,62 @@
+includes:
+- configs/datasets/hateful_memes/with_features.yaml
+
+dataset_config:
+  hateful_memes:
+    return_features_info: true
+    processors:
+      text_processor:
+        type: bert_tokenizer
+        params:
+          tokenizer_config:
+            type: bert-base-uncased
+            params:
+              do_lower_case: true
+          mask_probability: 0
+          max_seq_length: 128
+      transformer_bbox_processor:
+        type: transformer_bbox
+        params:
+          bbox_key: bbox
+          image_width_key: image_width
+          image_height_key: image_height
+
+model_config:
+  lxmert:
+    training_head_type: classification
+    num_labels: 2
+    losses:
+    - type: cross_entropy
+
+
+optimizer:
+  type: adam_w
+  params:
+    lr: 1e-4
+    eps: 1e-8
+
+scheduler:
+  type: warmup_linear
+  params:
+    num_warmup_steps: 6000
+    num_training_steps: 60000
+
+evaluation:
+  metrics:
+  - accuracy
+  - binary_f1
+  - roc_auc
+
+training:
+  batch_size: 16
+  lr_scheduler: true
+  max_updates: 1000
+  find_unused_parameters: true
+  early_stop:
+    criteria: hateful_memes/roc_auc
+    minimize: false
+
+checkpoint:
+  pretrained_state_mapping:
+    model.bert: model.bert
+  resume_pretrained: true
