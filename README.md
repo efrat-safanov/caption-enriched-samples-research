@@ -31,4 +31,9 @@ To continue the pre-training of the language models (BERT and RoBERTA) we used t
 
 For the UNITER baseline, we use batch size:8 on a single GPU (learning rate: 1e-5). For ensembling it with a pre-trained RoBERTA model, we use batch size:6 with gradient accumulation: 2 (same learning rate). Each run takes roughly 1 hour. We used 36 features for the images.
 
-
+# Credits
+* MMF - https://github.com/facebookresearch/mmf
+* IBM Max caption generator - https://github.com/IBM/MAX-Image-Caption-Generator
+* Transformers (huggingface) - https://github.com/huggingface/transformers/
+* Vilio - https://github.com/Muennighoff/vilio
+* Kaggle Ensemble Guide - https://github.com/MLWave/Kaggle-Ensemble-Guide
