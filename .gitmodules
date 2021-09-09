@@ -1,3 +1,6 @@
 [submodule "vilio_with_captions"]
 	path = vilio_with_captions
 	url = https://github.com/efrat-safanov/vilio_with_captions/
+[submodule "mmf-modifications"]
+	path = mmf-modifications
+	url = https://github.com/efrat-safanov/mmf-modifications
