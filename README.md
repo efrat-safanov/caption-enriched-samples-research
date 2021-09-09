@@ -39,3 +39,8 @@ For the UNITER baseline, we use batch size:8 on a single GPU (learning rate: 1e-
 * Transformers (huggingface) - https://github.com/huggingface/transformers/
 * Vilio - https://github.com/Muennighoff/vilio
 * Kaggle Ensemble Guide - https://github.com/MLWave/Kaggle-Ensemble-Guide
+
+
+# Citation 
+TBD - EMNLP 2021
+
