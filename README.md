@@ -1,6 +1,8 @@
-# caption-enriched-samples-research
-A research repository for improved visiolingual tasks using caption enriched samples
+# Implementation of Caption Enriched Samples for Improving Hateful Memes Detection
+A research repository for improved visiolingual tasks using caption enriched samples.
 
+# A quick overview
+The recently introduced hateful meme challenge demonstrates the difficulty of determining whether a meme is hateful or not. Specifically, both unimodal language models and multimodal vision-language models cannot reach the human level of performance. Motivated by the need to model the contrast between the image content and the overlayed text, we suggest applying an off-the-shelf image captioning tool in order to capture the first. We demonstrate that the incorporation of such automatic captions during fine-tuning improves the results for various unimodal and multimodal models. Moreover, in the unimodal case, continuing the pre-training of language models on augmented and original caption pairs, is highly beneficial to the classification accuracy.
 
 # Datasets
 We use the publicly available hateful memes dataset along with Vilio's features dataset for UNITER implementation.
