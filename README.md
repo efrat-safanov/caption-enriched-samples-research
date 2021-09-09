@@ -15,7 +15,6 @@ We augment the dataset with generated captions.
 Some explanation about the code structure:
   * mmf-modications - changes done to mmf codebase to utilize captions for BERT, RoBERTa, VisualBert, ViLBERT. 
   * vilio\_with\_captions - changes done to Vilio codebase to support UNITER with captions.
-  * MAX-Image-Caption-Generator - provided as is to for caption generations
   * my\_hateful\_memes - code that uses MAX-Image-Caption-Generator to create captions for the dataset and the generated captions in 2 formats - CSVs for the dataset and datasets for BERT and RoBERTa's pretraining (using huggingface transformers code, not supplied)
   * Kaggle-Ensemble-Guide - changes to the Kaggle-Ensemble-Guide codebase to generate ensembles for the results.
 
