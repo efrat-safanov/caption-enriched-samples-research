@@ -41,6 +41,8 @@ For the UNITER baseline, we use batch size:8 on a single GPU (learning rate: 1e-
 
 
 # Citation 
+If you make use of our work, please cite our paper:
+```
 @misc{blaier2021caption,
       title={Caption Enriched Samples for Improving Hateful Memes Detection}, 
       author={Efrat Blaier and Itzik Malkiel and Lior Wolf},
@@ -49,4 +51,4 @@ For the UNITER baseline, we use batch size:8 on a single GPU (learning rate: 1e-
       archivePrefix={arXiv},
       primaryClass={cs.CV}
 }
-
+```
